@@ -2,13 +2,14 @@ $primary-color: #5b5656;
 $secondary-color: #7fcd91;
 $show-home-image: true;
 $home-image: url(../img/background_img.jpg);
+$about-image: url(../img/about_page_background.jpg);
 $background-opacity: 0.5;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
 
-@mixin background {
+@mixin home_background {
   @if $show-home-image{
     &#bg-img {
       background: $home-image;
@@ -26,6 +27,15 @@ $background-opacity: 0.5;
         z-index: -1;
       }
     }
+  }
+}
+
+//Set Text Color
+@function set-text-colour($colour) {
+  @if (lightness($colour) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
   }
 }
 

@@ -1,10 +1,23 @@
 //Wide Screens
 @include mediaXL {
+    main{
+        .job{
+            font-size: 24px;
+        }
+    }
+    .about-info{
+        .bio {
+            font-size: 28px;
+        }
+        .bio-image {
+            width: 20rem;
+            height: 20rem;
+        }
+    }
 }
 
 //Desktops and Laptops
 @include mediaLg {
-    
 }
 
 //Tablets and small laptops
@@ -43,6 +56,17 @@
             width: 150px;
             height: 150px;
         }
+    }
+
+    .about-info {
+        grid-template-areas:
+        'bioimage'
+        'bio'
+        'job1'
+        'job2'
+        'job3';
+
+        grid-template-columns: 1fr;
     }
 }
 
